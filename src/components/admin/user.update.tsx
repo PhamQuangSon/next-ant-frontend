@@ -33,7 +33,7 @@ const UserUpdate = (props: IProps) => {
                 address: dataUpdate.address
             })
         }
-    }, [dataUpdate])
+    }, [dataUpdate, form])
 
     const handleCloseUpdateModal = () => {
         form.resetFields()

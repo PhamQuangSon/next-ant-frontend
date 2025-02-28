@@ -19,7 +19,7 @@ const ModalReactive = (props: any) => {
         if (userEmail) {
             form.setFieldValue("email", userEmail)
         }
-    }, [userEmail]);
+    }, [form, userEmail]);
 
     if (!hasMounted) return <></>;
 
