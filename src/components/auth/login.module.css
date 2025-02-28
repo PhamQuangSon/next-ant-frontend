@@ -27,7 +27,7 @@
 
 .loginImage {
   max-width: 400px;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -101,6 +101,7 @@
   }
   .loginImage {
     display: block;
+    width: 80%;
   }
   .footer {
     position: relative;
@@ -112,7 +113,8 @@
 
   .formWrapper {
     background: transparent;
-    margin: 0 auto;;
+    margin: 0 auto;
+    min-width: unset;
   }
   .bgWrapper {
     background: rgba(255, 255, 255, 0.5);
