@@ -5,9 +5,8 @@
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
-  overflow: hidden;
 }
 
 .formContainer {
@@ -113,6 +112,7 @@
 
   .formWrapper {
     background: transparent;
+    margin: 0 auto;;
   }
   .bgWrapper {
     background: rgba(255, 255, 255, 0.5);
