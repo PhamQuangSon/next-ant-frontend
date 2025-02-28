@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
-import '@/app/globals.css';
+import "@/app/globals.css";
+import { ConfigProvider } from "antd";
 import NextAuthWrapper from "@/library/next.auth.wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,10 +23,29 @@ export default function RootLayout({
       <body className={inter.className}>
         <AntdRegistry>
           <NextAuthWrapper>
-            {children}
+            <ConfigProvider
+              theme={{
+                token: {
+                  colorPrimary: "#4a8c4a",
+                  borderRadius: 6,
+                },
+                components: {
+                  Button: {
+                    colorPrimaryHover: "#3a7a3a",
+                  },
+                  Input: {
+                    colorBorder: "#d9d9d9",
+                  },
+                  Checkbox: {
+                    colorPrimary: "#4a8c4a",
+                  },
+                },
+              }}
+            >
+              {children}
+            </ConfigProvider>
           </NextAuthWrapper>
         </AntdRegistry>
-
       </body>
     </html>
   );

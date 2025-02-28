@@ -1,3 +1,17 @@
+/* Ant Design CSS */
+@import "~antd/dist/reset.css";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: #e6f2e6;
+} */
+
 * {
   margin: 0;
 }
